@@ -1,0 +1,28 @@
+package robot.commands;
+
+import robot.RobotMap.Direction;
+import simulator.CommandGroup;
+
+public class AutonOne extends CommandGroup {
+
+ static final int Forward_Distance = 6;
+	public static final double Turn_Distance = 5.005 ;
+	
+	
+	
+	
+	public AutonOne() {
+		
+		this.addSequential(new DriveFor(Forward_Distance, Direction.FORWARD)); 
+		this.addSequential(new TurnFor(Turn_Distance, Direction.RIGHT));
+		this.addSequential(new DriveFor(Forward_Distance, Direction.FORWARD));
+		this.addSequential(new TurnFor(Turn_Distance, Direction.RIGHT));
+		this.addSequential(new DriveFor(Forward_Distance, Direction.FORWARD));
+
+
+		
+		
+
+		
+	}
+}
